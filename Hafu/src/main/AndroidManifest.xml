@@ -18,6 +18,12 @@
             android:label="@string/title_activity_main"></activity>
         <activity android:name=".activity.OrderDetailActivity" />
         <activity android:name=".activity.RegisterActivity">
+
+        </activity>
+
+        <activity
+            android:name=".activity.KaKaLauncherActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
