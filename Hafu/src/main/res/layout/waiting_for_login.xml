@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:weightSum="1"
         android:clickable="true"
-        android:onClick="login">
+        android:onClick="turnToLogin">
 
         <!--<com.hafu.Hafu.view.ImageViewPlus-->
             <!--android:id="@+id/userIcon"-->
@@ -203,7 +203,8 @@
         android:layout_height="45dp"
         android:clickable="true"
         android:background="@drawable/shadow"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:onClick="about_us">
         <ImageView
             android:layout_width="20dp"
             android:layout_height="30dp"
@@ -243,6 +244,6 @@
         android:text="点此登录"
         android:textColor="@android:color/holo_red_light"
         android:background="#ffffff"
-        android:onClick="login"/>
+        android:onClick="turnToLogin"/>
 
 </LinearLayout>

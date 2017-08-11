@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hafu.Hafu.activity.OrderDetailActivity"
     android:orientation="vertical"
     android:background="#eeeeee">
+
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -26,46 +24,44 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="订单详情"
+            android:text="管理地址"
             android:textColor="#13beec"
             android:textSize="25dp"
             android:gravity="center"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="3dp"
             />
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/bottom_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#ffffff">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="总额：286元"
-            android:textSize="25dp"
-            android:textColor="#ff5f3e"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="状态：已完成"
-            android:textSize="18dp"
+            android:layout_height="match_parent"
+            android:text="保存"
+            android:textColor="#13beec"
+            android:textSize="20dp"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="3dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="@drawable/shadow"
+            android:clickable="true"
+            android:onClick="save"
             />
     </RelativeLayout>
-    <ListView
-        android:id="@+id/order_detail_list"
+
+    <Button
+        android:id="@+id/add_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_above="@id/bottom_result"
-        android:layout_marginTop="5dp">
+        android:text="增加新地址"
+        android:layout_alignParentBottom="true"
+        android:onClick="addAddress"
+        android:background="@drawable/add_address_btn"/>
+    <ListView
+        android:id="@+id/address_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_address"
+        android:layout_below="@id/title"
+        android:layout_marginTop="2dp"
+        >
     </ListView>
 
 </RelativeLayout>

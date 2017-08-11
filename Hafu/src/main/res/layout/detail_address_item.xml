@@ -1,69 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/shadow">
-
+    android:id="@+id/address_item"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    >
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="40dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="姓名"
-        android:textSize="10pt"
-        android:layout_marginLeft="10dp"
-        android:id="@+id/username1"/>
-    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="18792392381"
-        android:id="@+id/phonenuber"
-        android:textSize="9pt"
-        android:textStyle="bold"
-        android:gravity="right"
-        android:layout_marginRight="10dp"/>
-</LinearLayout>
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:textSize="8pt"
-    android:layout_marginLeft="10dp"
-    android:text="天津市津南区南开大学233宿舍"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp">
         <TextView
-            android:layout_marginTop="10dp"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="设为默认地址"/>
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="100dp"
-            android:src="@drawable/write"/>
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textSize="10pt"
+            android:layout_marginLeft="10dp" />
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-
-            android:text="编辑"/>
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/delete"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/pid"
+            android:text="1"
+            android:visibility="gone"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:text="删除"/>
-
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18792392381"
+            android:textSize="9pt"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_marginRight="10dp"/>
     </LinearLayout>
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="8pt"
+        android:layout_marginLeft="10dp"
+        android:text="天津市津南区南开大学233宿舍" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp">
+        <RadioButton
+            android:id="@+id/isPrimaryAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="设为默认地址"
+            android:layout_centerVertical="true"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true">
+            <LinearLayout
+                android:id="@+id/edit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:clickable="true">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/write"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="编辑"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/delete"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="删除"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
